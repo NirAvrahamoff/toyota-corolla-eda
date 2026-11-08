@@ -7,12 +7,12 @@ A private buyer wants to know whether a used Toyota Corolla with an automatic ge
 
 ## Key finding
 
-In a raw comparison there is almost no price difference: the median price is **€9,900 for manuals and €9,950 for automatics**. But automatics in the sample are older (median age 65 vs 60 months), and age is the strongest driver of price (r = −0.88). When cars of the **same age** are compared, the automatic is more expensive in **every one of five age bands**, by €455 to €1,625. After controlling for age, mileage, engine, fuel, equipment and warranty, an estimated premium of about **€600 to €970 (about 7% of the price)** remains.
+In a raw comparison there is almost no price difference: the median price is **€9,900 for manuals and €9,950 for automatics**. But automatics in the sample are older (median age 65 vs 60 months), and age is the strongest driver of price (r = −0.88). When cars of the **same age** are compared, the automatic is more expensive in **every one of five age bands**, by €455 to €1,625, which is 4% to 12% of the price (about 8% in most bands). In euros the premium shrinks with age, but as a share of the price it stays roughly constant. After controlling for age, mileage, engine, fuel, equipment and warranty, an estimated premium of about **€600 to €970 (about 7% of the price)** remains.
 
 | Comparison | Automatic premium |
 |---|---|
 | Raw, no controls | €533 (95% CI includes zero) |
-| Same age band (median difference) | €455 to €1,625 in each band |
+| Same age band (median difference) | €455 to €1,625 (4% to 12%) in each band |
 | Regression, controlling for age | €966 |
 | + mileage, engine power, fuel, equipment, warranty | €602 (95% CI €321 to €884) |
 | Log-price model | +7.1% (95% CI 4.6% to 9.7%) |
@@ -37,7 +37,7 @@ The data contain asking prices, not transaction prices, and only 80 automatics (
 
 ```
 toyota-corolla-eda/
-├── toyota_automatic_eda.ipynb      # full analysis (runs top to bottom)
+├── toyota_eda.ipynb      # full analysis (runs top to bottom)
 ├── Toyota_Corolla_cars.xlsx        # original data, sheet "data"
 ├── requirements.txt
 ├── figures/                        # graphs saved by the notebook (g1 to g6)
@@ -51,7 +51,7 @@ toyota-corolla-eda/
 git clone https://github.com/NirAvrahamoff/toyota-corolla-eda.git
 cd toyota-corolla-eda
 pip install -r requirements.txt
-jupyter lab toyota_automatic_eda.ipynb
+jupyter lab toyota_eda.ipynb
 ```
 
 Run all cells (Kernel, Restart Kernel and Run All Cells). The notebook reads `Toyota_Corolla_cars.xlsx` from the same folder and saves the graphs to `figures/`. Tested with Python 3.11.
@@ -68,6 +68,8 @@ The notebook text is in Hebrew; code, graph titles and axis labels are in Englis
 
 ## תקציר בעברית
 
-הפרויקט הוא מטלת ביניים בקורס ניתוחי מידע בתובנות סטטיסטיות (אוניברסיטת אריאל). בעל העניין הוא קונה פרטי שרוצה לדעת אם משלמים יותר על קורולה משומשת עם תיבה אוטומטית. בהשוואה הגולמית אין כמעט הבדל במחיר, כי האוטומטיים מבוגרים יותר. באותו גיל האוטומט יקר יותר בכל קבוצות הגיל, ואחרי בקרה על גיל, ק״מ, מנוע, דלק, ציוד ואחריות נשארת פרמיה מוערכת של כ־600 עד 970 €, כ־7% מהמחיר. זו הערכה מנתוני תצפית, לא הוכחה סיבתית.
+הפרויקט הוא מטלת ביניים בקורס ניתוחי מידע בתובנות סטטיסטיות (אוניברסיטת אריאל). בעל העניין הוא קונה פרטי שרוצה לדעת אם משלמים יותר על קורולה משומשת עם תיבה אוטומטית. בהשוואה הגולמית אין כמעט הבדל במחיר, כי האוטומטיים מבוגרים יותר. באותו גיל האוטומט יקר יותר בכל קבוצות הגיל, בכ־8% מהמחיר ברוב הקבוצות, ואחרי בקרה על גיל, ק״מ, מנוע, דלק, ציוד ואחריות נשארת פרמיה מוערכת של כ־600 עד 970 €, כ־7% מהמחיר. זו הערכה מנתוני תצפית, לא הוכחה סיבתית.
 
-**Author:** Nir Avrahamoff, Industrial Engineering and Management (Data Science and AI track), Ariel University
+מגישים: ניר אברהמוף, עינב ינון
+
+**Authors:** Nir Avrahamoff and Einav Yinon, Industrial Engineering and Management, Ariel University
